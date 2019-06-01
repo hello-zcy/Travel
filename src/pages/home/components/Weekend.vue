@@ -4,7 +4,7 @@
         <ul>
             <li
               class="item border-bottom"
-              v-for="item of weekendList"
+              v-for="item of list"
               :key="item.id"
               border-bottom
             >
@@ -13,7 +13,7 @@
                 </div>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
-                    <p class="item-desc">{{item.info}}</p>
+                    <p class="item-desc">{{item.desc}}</p>
                 </div>
             </li>
         </ul>
@@ -23,34 +23,11 @@
 <script>
 export default {
   name: 'HomeWekend',
+  props:{
+    list:Array
+  },
   data () {
       return {
-        weekendList : [
-            {
-            id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-            title: '大连亚圣海洋馆',
-            info: '浪漫大连首战，浪漫的海洋主题乐园'
-            },
-            {
-            id: '0002',
-            imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-            title: '大连亚圣海洋馆',
-            info: '浪漫大连首战，浪漫的海洋主题乐园'
-            },
-            {
-            id: '0003',
-            imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-            title: '大连亚圣海洋馆',
-            info: '浪漫大连首战，浪漫的海洋主题乐园'
-            },
-            {
-            id: '0004',
-            imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-            title: '大连亚圣海洋馆',
-            info: '浪漫大连首战，浪漫的海洋主题乐园'
-            }
-        ]
       }
   }
 }
