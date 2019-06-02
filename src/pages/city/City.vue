@@ -2,8 +2,15 @@
     <div>
         <city-header></city-header>
         <city-search></city-search>
-        <city-list :cities="cities" :hotCities="hotCities"></city-list>
-        <city-alphaet :cities="cities"></city-alphaet>
+        <city-list 
+            :cities="cities" 
+            :hotCities="hotCities"
+            :letter="letter"
+        ></city-list>
+        <city-alphaet 
+            :cities="cities"
+            @change="handleLetterChange"
+        ></city-alphaet>
     </div>
 </template>
 
@@ -20,7 +27,8 @@ export default {
         return {
             cities:{},
             hotCities:[],
-            currentCity:'北京'
+            currentCity:'北京',
+            letter:''
         }
     },
     components: {
@@ -46,6 +54,9 @@ export default {
         },
         handleGetCityInfoFail (err) {
             console.log(err);
+        },
+        handleLetterChange (letter) {
+            this.letter=letter;
         }
     },
     mounted () {
