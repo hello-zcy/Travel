@@ -28,8 +28,7 @@ export default {
     data () {
         return {
             cities:{},
-            hotCities:[],
-            currentCity:'北京',
+            hotCities:[],         
             letter:''
         }
     },
@@ -52,6 +51,7 @@ export default {
                 var data=res.data;
                 this.cities=data.cities;
                 this.hotCities=data.hotCities
+              
             }
         },
         handleGetCityInfoFail (err) {

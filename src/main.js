@@ -9,6 +9,7 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
+import store from './store'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
@@ -19,6 +20,7 @@ new Vue({
   el: '#app',
   // 挂载
   router,
+  store,
   // 路由就是根据网址的不同。返回不同的内容
   components: { App },
   template: '<App/>'
