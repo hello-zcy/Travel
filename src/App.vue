@@ -3,7 +3,10 @@
     <!-- <img src="./assets/logo.png"> -->
 
     <!-- 当前路由地址所显示的路径 -->
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+    
   </div>
 </template>
 
